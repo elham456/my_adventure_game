@@ -37,6 +37,21 @@ def start():
                     f"effective) {weapon}.", 2)
     
 
+def play_again():
+    global power_level
+    choice = ''
+    while choice not in ['y', 'n']:
+        choice = input("Would you like to play agin? (y/n)")
+        if choice == 'y':
+            power_level = 3
+            print_and_sleep("Good! starting new game ... \n", 2)
+            weapon = random.choice(weapons)
+            mean()
+        elif choice == 'n':
+            print_and_sleep("Thanks for playing.", 2)
+            exit()
+            
+            
 def sleep():
     global power_level
     power_level -= 1
