@@ -26,7 +26,17 @@ def print_and_sleep(msg, waiting):
     time.sleep(waiting)
 
 
-
+def start():
+    print_and_sleep("You find yourself standing in an open field, filled with"
+                    " grass and yellow wildflowers.", 2)
+    print_and_sleep(f"Rumor has it that  {current_enemy} is somewhere around "
+                    "here, and has been terrifying the nearby village.", 2)
+    print_and_sleep("In front of you is a house.", 2)
+    print_and_sleep("To your right is a dark cave.", 2)
+    print_and_sleep(f"In your hand you hold your trusty (but not very "
+                    f"effective) {weapon}.", 2)
+    
+    
 def cave():
     global have_Sword
     global weapon
