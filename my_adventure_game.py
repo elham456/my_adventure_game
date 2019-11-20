@@ -36,7 +36,23 @@ def start():
     print_and_sleep(f"In your hand you hold your trusty (but not very "
                     f"effective) {weapon}.", 2)
     
-    
+
+def sleep():
+    global power_level
+    power_level -= 1
+    print_and_sleep("", 1)
+    print_and_sleep(f"your bower level is {power_level} ", 1)
+    print_and_sleep("1 hour left", 1)
+    print_and_sleep("2 hour left", 1)
+    print_and_sleep("3 hour left", 1)
+    print_and_sleep("wake up now ...", 1)
+    if power_level == 0:
+        print_and_sleep("You sleep more your power is 0 .. you lose ...\n", 2)
+        play_again()
+    else:
+        decision()
+        
+        
 def cave():
     global have_Sword
     global weapon
