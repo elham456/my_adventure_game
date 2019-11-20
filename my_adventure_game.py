@@ -53,6 +53,14 @@ def sleep():
         decision()
         
         
+def House_of_horrors():
+    print_and_sleep("You approach the door of the house.", 2)
+    print_and_sleep(f"You are about to knock when the door opens and out "
+                    f"steps {current_enemy}.", 2)
+    print_and_sleep(f"Eep! This is  {current_enemy}'s house!", 2)
+    Battle_or_escape(weapon)
+
+    
 def cave():
     global have_Sword
     global weapon
